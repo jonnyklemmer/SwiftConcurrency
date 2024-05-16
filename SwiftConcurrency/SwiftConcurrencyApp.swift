@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-@main
+@main @MainActor
 struct SwiftConcurrencyApp: App {
+    let vm = OperationViewModel()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .task {
+                    await vm.run()
+                }
         }
     }
 }

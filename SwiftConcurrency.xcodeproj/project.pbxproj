@@ -14,6 +14,9 @@
 		1873FBB12BD9EF25007E2D65 /* SwiftConcurrencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873FBB02BD9EF25007E2D65 /* SwiftConcurrencyTests.swift */; };
 		1873FBBB2BD9EF25007E2D65 /* SwiftConcurrencyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873FBBA2BD9EF25007E2D65 /* SwiftConcurrencyUITests.swift */; };
 		1873FBBD2BD9EF25007E2D65 /* SwiftConcurrencyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873FBBC2BD9EF25007E2D65 /* SwiftConcurrencyUITestsLaunchTests.swift */; };
+		1873FC4B2BEC5769007E2D65 /* RepositoryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873FC4A2BEC5769007E2D65 /* RepositoryOperation.swift */; };
+		1893F3452BF597DF00E7F9BC /* CombineAsyncExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893F3442BF597DF00E7F9BC /* CombineAsyncExample.swift */; };
+		1893F3472BF5980700E7F9BC /* MyActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893F3462BF5980700E7F9BC /* MyActorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		1873FBB62BD9EF25007E2D65 /* SwiftConcurrencyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftConcurrencyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1873FBBA2BD9EF25007E2D65 /* SwiftConcurrencyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyUITests.swift; sourceTree = "<group>"; };
 		1873FBBC2BD9EF25007E2D65 /* SwiftConcurrencyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConcurrencyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1873FC4A2BEC5769007E2D65 /* RepositoryOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOperation.swift; sourceTree = "<group>"; };
+		1893F3442BF597DF00E7F9BC /* CombineAsyncExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineAsyncExample.swift; sourceTree = "<group>"; };
+		1893F3462BF5980700E7F9BC /* MyActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyActorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 				1873FBA12BD9EF24007E2D65 /* ContentView.swift */,
 				1873FBA32BD9EF25007E2D65 /* Assets.xcassets */,
 				1873FBA52BD9EF25007E2D65 /* Preview Content */,
+				1873FC4A2BEC5769007E2D65 /* RepositoryOperation.swift */,
+				1893F3442BF597DF00E7F9BC /* CombineAsyncExample.swift */,
 			);
 			path = SwiftConcurrency;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				1873FBB02BD9EF25007E2D65 /* SwiftConcurrencyTests.swift */,
+				1893F3462BF5980700E7F9BC /* MyActorTests.swift */,
 			);
 			path = SwiftConcurrencyTests;
 			sourceTree = "<group>";
@@ -259,6 +268,8 @@
 			files = (
 				1873FBA22BD9EF24007E2D65 /* ContentView.swift in Sources */,
 				1873FBA02BD9EF24007E2D65 /* SwiftConcurrencyApp.swift in Sources */,
+				1873FC4B2BEC5769007E2D65 /* RepositoryOperation.swift in Sources */,
+				1893F3452BF597DF00E7F9BC /* CombineAsyncExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1873FBB12BD9EF25007E2D65 /* SwiftConcurrencyTests.swift in Sources */,
+				1893F3472BF5980700E7F9BC /* MyActorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

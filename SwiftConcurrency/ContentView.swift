@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct ContentView: View {
-    let viewModel = ViewModel()
+    @State var viewModel = ViewModel()
 
     @State var welcomeString: String = "Loading..."
 
@@ -17,10 +18,11 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text(welcomeString)
+            Text(viewModel.myTitle)
         }
         .task {
-            welcomeString = await viewModel.fetchData()
+//            welcomeString = await viewModel.fetchData()
+            viewModel.doSomethingOnAppear()
         }
         .padding()
     }
@@ -30,18 +32,30 @@ struct ContentView: View {
     ContentView()
 }
 
-struct ViewModel {
+@Observable
+class ViewModel {
+    var myTitle = "title"
+
+    // Example of a labeled dispatch queue!
+    let queue = DispatchQueue(label: "my-dispatch-queue")
+
     func doSomethingOnAppear() {
-        print("im starting")
+//        print("im starting")
 
-        // Option 1:
-        Task { @MainActor in
-            await doAsyncWork()
+//         Option 1:
+//        Task { @MainActor in
+//            await doAsyncWork()
+//
+//            print("my task is ending")
+//        }
 
-            print("my task is ending")
+        // How to use the dispatch queue
+        queue.async {
+            self.myTitle = "new title"
+//            print("my task is ending")
         }
 
-        print("im ending")
+//        print("im ending")
     }
 
     @MainActor
@@ -50,7 +64,7 @@ struct ViewModel {
         try! await Task.sleep(nanoseconds: 3_000_000_000)
 
         // Perform our operation
-        print("did work")
+//        print("did work")
     }
 
     func fetchData() async -> String{
